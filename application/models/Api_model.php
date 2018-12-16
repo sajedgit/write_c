@@ -16,6 +16,37 @@ class Api_Model extends CI_Model
 	
 	
 	/*
+	FUNCTION NAME : get_all_question_answer
+	it will retun all  get_all_question_answer list*/
+	public function get_all_question_answer()
+	{
+		
+		$sql="select * from question_answer";
+		
+		//$sql="select id,category_name from summons_category";
+		$query=$this->db->query($sql);
+		//print_r($query->result_object());die();
+		return $query->result_array();
+	}
+		
+	
+	
+	/*
+	FUNCTION NAME : get_all_radio_codes
+	it will retun all  get_all_radio_codes list*/
+	public function get_all_radio_codes()
+	{
+		
+		$sql="select * from radio_codes";
+		
+		//$sql="select id,category_name from summons_category";
+		$query=$this->db->query($sql);
+		//print_r($query->result_object());die();
+		return $query->result_array();
+	}
+		
+
+	/*
 	FUNCTION NAME : get_all_summons_by_category
 	it will retun all  get_all_summons_by_category list*/
 	public function get_all_summons_by_category($id)

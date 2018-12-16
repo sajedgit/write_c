@@ -30,6 +30,57 @@ class Api extends CI_Controller {
 	
 	
 	
+	public function readQuestionAnswer()
+	{	
+	    $products_arr=array(); 
+		$products_arr["message"]="";
+		$products_arr["records"]=array();
+		$question_answer=$this->api_model->get_all_question_answer();
+		foreach($question_answer as $data)
+		{
+		    $question_answer_details=$this->str_formate($data["question_answer_details"]);
+			
+				$product_item=array(
+					"question_answer_id" => $data["id"],
+					"question_answer_details" => $question_answer_details,
+				
+				);
+
+			
+			 array_push($products_arr["records"], $product_item);
+		     $products_arr["message"]="Read Successfully";
+		}
+		
+		 $this->output->set_content_type('application/json')->set_output(json_encode($products_arr));
+	}	
+	
+	
+	public function readRadioCodes()
+	{	
+	    $products_arr=array(); 
+		$products_arr["message"]="";
+		$products_arr["records"]=array();
+		$radio_codes=$this->api_model->get_all_radio_codes();
+		foreach($radio_codes as $data)
+		{
+		    $radio_codes_details=$this->str_formate($data["radio_codes_details"]);
+			
+				$product_item=array(
+					"radio_codes_id" => $data["id"],
+					"radio_codes_details" => $radio_codes_details,
+				
+				);
+
+			
+			 array_push($products_arr["records"], $product_item);
+		     $products_arr["message"]="Read Successfully";
+		}
+		
+		 $this->output->set_content_type('application/json')->set_output(json_encode($products_arr));
+	}	
+	
+	
+	
 	public function readSummonsCategory()
 	{	
 	    $products_arr=array(); 

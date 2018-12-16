@@ -147,4 +147,7 @@ $route['edit_question_answer/(:any)']="QuestionAnswer/edit_question_answer/$1";
 $route['api/read_summons']="Api/readSummonsCategory";
 $route['api/read_arrest_complaint']="Api/readArrestComplaint";
 
+$route['api/read_radio_codes']="Api/readRadioCodes";
+$route['api/read_dir_question']="Api/readQuestionAnswer";
+
 /********************	end API	**********************************/
