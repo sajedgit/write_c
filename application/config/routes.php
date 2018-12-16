@@ -132,6 +132,14 @@ $route['edit_radio_codes/(:any)']="RadioCodes/edit_radio_codes/$1";
 
 /********************	end radio_codes	**********************************/
 
+/********************	for Dir Question	**********************************/
+    
+$route['question_answer']="QuestionAnswer/admin_question_answer";
+//$route['add_new_question_answer']="QuestionAnswer/create_question_answer";
+$route['edit_question_answer/(:any)']="QuestionAnswer/edit_question_answer/$1";
+
+/********************	end Dir Question	**********************************/
+
 
 
 /********************	for API	**********************************/
