@@ -122,9 +122,15 @@ $route['oath']="Oath/admin_oath";
 $route['add_new_oath']="Oath/create_oath";
 $route['delete_oath/(:any)/(:any)']="Oath/delete_oath/$1/$2";
 $route['edit_oath/(:any)']="Oath/edit_oath/$1";
-$route['view_oath/(:any)']="Oath/view_oath/$1"; 
+$route['view_oath/(:any)']="Oath/view_oath/$1";
 
-/********************	end oath	**********************************/
+/********************	for radio_codes	**********************************/
+    
+$route['radio_codes']="RadioCodes/admin_radio_codes";
+//$route['add_new_radio_codes']="RadioCodes/create_radio_codes";
+$route['edit_radio_codes/(:any)']="RadioCodes/edit_radio_codes/$1";
+
+/********************	end radio_codes	**********************************/
 
 
 

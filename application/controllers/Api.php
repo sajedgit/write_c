@@ -91,7 +91,7 @@ class Api extends CI_Controller {
 	
 	public function str_formate($str)
 	{
-		$str= preg_replace('/[^A-Za-z0-9\-. ()<>:;=&"]/', '', $str); // Removes special chars.
+		$str= preg_replace('/[^A-Za-z0-9\-. ()<>:;,=&"]/', '', $str); // Removes special chars.
 		$str= str_replace("\"","'",$str);
 		return $str;
 	}
@@ -138,7 +138,7 @@ class Api extends CI_Controller {
 			$product_item=array(
 				"arrest_complaint_id" => $data["id"],
 				"category_name" => $category_name,
-				"summons_title" => $arrest_complaint_details,
+				"arrest_complaint_details" => $arrest_complaint_details,
 				"transit" => $this->getTransitData(),
 			
 			);
@@ -149,7 +149,7 @@ class Api extends CI_Controller {
 			$product_item=array(
 				"arrest_complaint_id" => $data["id"],
 				"category_name" => $category_name,
-				"summons_title" => $arrest_complaint_details,
+				"arrest_complaint_details" => $arrest_complaint_details,
 			
 			);
 
