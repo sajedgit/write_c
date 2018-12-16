@@ -84,6 +84,18 @@
                         <p>Arrest and Complaint Details</p>
                     </a>
                 </li>
+                <li>
+                    <a href="<?php echo site_url("radio_codes"); ?>">
+                        <i class="pe-7s-note2"></i>
+                        <p>Radio Codes</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo site_url("question_answer"); ?>">
+                        <i class="pe-7s-news-paper"></i>
+                        <p>DIR Question</p>
+                    </a>
+                </li>
               
             </ul>
     	</div>
@@ -127,6 +139,9 @@
                                 <li><a href="<?php echo site_url("oath"); ?>">Oath Details</a></li>
                                 <li><a href="<?php echo site_url("arrest_complaint_category"); ?>">Arrest and Complaint Category</a></li>
 								<li><a href="<?php echo site_url("arrest_complaint_details"); ?>">Arrest and Complaint Details</a></li>
+								<li><a href="<?php echo site_url("radio_codes"); ?>">Radio Codes</a></li>
+								<li><a href="<?php echo site_url("question_answer"); ?>">DIR Question</a></li>
+			
                               </ul>
                         </li>
                         <li>
@@ -160,6 +175,8 @@
                                 <li><a href="<?php echo site_url("oath"); ?>">Oath Details</a></li>
 								<li><a href="<?php echo site_url("arrest_complaint_category"); ?>">Arrest and Complaint Category</a></li>
 								<li><a href="<?php echo site_url("arrest_complaint_details"); ?>">Arrest and Complaint Details</a></li>
+								<li><a href="<?php echo site_url("radio_codes"); ?>">Radio Codes</a></li>
+								<li><a href="<?php echo site_url("question_answer"); ?>">DIR Question</a></li>
                               
                               </ul>
                         </li>
