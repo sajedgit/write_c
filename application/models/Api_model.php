@@ -93,12 +93,27 @@ class Api_Model extends CI_Model
 	
 	
 	/*
-	FUNCTION NAME : get_all_oath_list
-	it will retun all  get_all_oath_list list*/
-	public function get_all_oath_list()
+	FUNCTION NAME : get_all_oath_category_list
+	it will retun all  get_all_oath_category_list */
+	public function get_all_oath_category_list()
 	{
 		
-		$sql="select * from oath_details order by id asc";
+		$sql="SELECT DISTINCT(`oath_category_name`) from `oath_details`"; 
+		$query=$this->db->query($sql);
+		//print_r($query->result_object());die();
+		return $query->result_array();
+	}
+	
+
+		
+	
+	/*
+	FUNCTION NAME : get_all_oath_details
+	it will retun all  get_all_oath_details list*/
+	public function get_all_oath_details($oath_category_name)
+	{
+		
+		$sql="select * from oath_details where oath_category_name='$oath_category_name'";
 		
 		//$sql="select id,category_name from summons_category";
 		$query=$this->db->query($sql);

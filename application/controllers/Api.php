@@ -147,16 +147,34 @@ class Api extends CI_Controller {
 		return $str;
 	}
 	
-	
 	public function getOathData()
 	{
-		$oath=$this->api_model->get_all_oath_list();
+		$oath=$this->api_model->get_all_oath_category_list();
+		$oath_arr=array();
+	    foreach($oath as $data)
+		{
+			$product_item=array(
+				
+				"oath_category_name" => $this->str_formate($data["oath_category_name"]),
+				"oath_category_details" => $this->getOathDataDetails($data["oath_category_name"]),
+			
+			);
+			
+			 array_push($oath_arr, $product_item);
+		}
+		return $oath_arr;
+
+	}
+	
+	public function getOathDataDetails($oath_category_name)
+	{
+		$oath=$this->api_model->get_all_oath_details($oath_category_name);
 		$oath_arr=array();
 	    foreach($oath as $data)
 		{
 			$product_item=array(
 				"id" => $data["id"],
-				"oath_category_name" => $this->str_formate($data["oath_category_name"]),
+				//"oath_category_name" => $this->str_formate($data["oath_category_name"]),
 				"oath_title" => $this->str_formate($data["oath_title"]),
 				"oath_section" => $this->str_formate($data["oath_section"]),
 				"oath_code" => $this->str_formate($data["oath_code"]),
